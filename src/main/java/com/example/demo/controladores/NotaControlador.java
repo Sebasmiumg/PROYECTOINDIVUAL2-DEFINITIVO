@@ -27,20 +27,20 @@ public class NotaControlador {
 
     @PostMapping
     public ResponseEntity<Nota> registrarNota(@RequestBody @Valid Nota nota) {
-        // Imprimir los datos recibidos desde el frontend para depuración
+        
         System.out.println("Estudiante recibido: " + nota.getEstudiante());
         System.out.println("Actividades recibidas: " + nota.getActividades());
         System.out.println("Primer Parcial recibido: " + nota.getPrimerParcial());
         System.out.println("Segundo Parcial recibido: " + nota.getSegundoParcial());
         System.out.println("Examen Final recibido: " + nota.getExamenFinal());
 
-        // Calcular el puntaje total directamente en el backend
+        
         nota.calcularPuntajeTotal();
 
-        // Guardar la nueva nota en la base de datos
+        
         Nota nuevaNota = notaRepositorio.save(nota);
 
-        // Imprimir la nota guardada para confirmar
+        
         System.out.println("Nota guardada: " + nuevaNota.toString());
 
         return new ResponseEntity<>(nuevaNota, HttpStatus.CREATED);
