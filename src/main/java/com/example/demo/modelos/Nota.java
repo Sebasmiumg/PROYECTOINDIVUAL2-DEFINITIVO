@@ -32,13 +32,13 @@ public class Nota {
     @Max(35) @Min(0)
     private Integer examenFinal;
 
-    // Aquí guardamos el puntaje total calculado en el backend
+    
     private Integer puntajeTotal;
 
-    // Constructor sin parámetros
+    
     public Nota() {}
 
-    // Constructor con parámetros
+    
     public Nota(String estudiante, int actividades, int primerParcial, int segundoParcial, int examenFinal) {
         this.estudiante = estudiante;
         this.actividades = actividades;
@@ -48,7 +48,7 @@ public class Nota {
         this.calcularPuntajeTotal(); 
     }
 
-    // Getters y Setters...
+    
     public Long getId() {
         return id;
     }
