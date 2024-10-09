@@ -105,7 +105,7 @@ public class Nota {
         this.puntajeTotal = puntajeTotal;
     }
 
-    // Método para calcular el puntaje total
+    
     public void calcularPuntajeTotal() {
         if (this.actividades != null && this.primerParcial != null && this.segundoParcial != null && this.examenFinal != null) {
             this.puntajeTotal = this.actividades + this.primerParcial + this.segundoParcial + this.examenFinal;
